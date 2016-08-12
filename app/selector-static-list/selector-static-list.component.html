@@ -1,0 +1,4 @@
+<ul>
+    <li *ngFor="let confUrl of suggestedConf" class="source" (click)="onSelectSource(confUrl)" [class.selected]="confUrl === selectedConfUrl">{{confUrl}}</li>
+</ul>
+<fhir-conformance [conformance]="conformance"></fhir-conformance>

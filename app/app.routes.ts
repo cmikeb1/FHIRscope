@@ -1,16 +1,16 @@
 import {RouterConfig, provideRouter} from "@angular/router";
-import {ConformanceComponent} from "./conformance.component";
-import {HelpComponent} from "./help.component";
+import {SelectorStaticListComponent} from "./selector-static-list/selector-static-list.component";
+import {HelpComponent} from "./help/help.component";
 
 const routes: RouterConfig = [{
-    path: 'conformance',
-    component: ConformanceComponent
+    path: 'selector-static-list',
+    component: SelectorStaticListComponent
 },{
     path: 'help',
     component: HelpComponent
 },{
     path: '',
-    redirectTo: '/conformance',
+    redirectTo: '/selector-static-list',
     pathMatch: 'full'
 }];
 

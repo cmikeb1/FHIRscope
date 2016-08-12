@@ -1,19 +1,20 @@
 import {Injectable} from '@angular/core';
-import {Conformance, Resource, Rest} from './Conformance';
-import {Http} from "@angular/http";
+import {Http, Headers, RequestOptions} from "@angular/http";
 import 'rxjs/add/operator/toPromise';
 import any = jasmine.any;
+import Resource = fhir.Resource;
 
 @Injectable()
 export class ConformanceService {
 
     constructor(private http: Http){}
 
-    getConformance() {
-
-        return this.http.get("app/confs")
+    getConformanceBySourceUrl(sourceUrl: string) {
+        let headers = new Headers({'Accept': 'application/json+fhir'});
+        let options = new RequestOptions({'headers': headers});
+        return this.http.get(sourceUrl, options)
             .toPromise()
-            .then(response => response.json().data as Conformance[])
+            .then(response => response.json() as Resource)
             .catch(this.handleError);
     }
 

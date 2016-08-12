@@ -1,18 +1,20 @@
 import {Component} from "@angular/core";
-import {ConformanceComponent} from "./conformance.component";
-import {ConformanceService} from "./conformance.service";
+import {ConformanceService} from "./shared/conformance.service";
 import { ROUTER_DIRECTIVES } from '@angular/router';
+import {MdToolbar} from '@angular2-material/toolbar';
 
 
 @Component({
     selector: 'my-app',
     template: `
-        <h1>{{title}}</h1>
-        <a [routerLink]="['/conformance']">Conformance</a>
+        <md-toolbar color="primary">
+            {{title}}
+        </md-toolbar>
+        <a [routerLink]="['/selector-static-list']">Static List Selector</a>
         <a [routerLink]="['/help']">Help</a>
-        <router-outlet></router-outlet>
+        <router-outlet></router-outlet>        
     `,
-    directives: [ROUTER_DIRECTIVES],
+    directives: [ROUTER_DIRECTIVES, MdToolbar],
     providers: [ConformanceService]
 })
 export class AppComponent {
