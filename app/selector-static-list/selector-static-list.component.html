@@ -1,4 +1,10 @@
-<ul>
-    <li *ngFor="let confUrl of suggestedConf" class="source" (click)="onSelectSource(confUrl)" [class.selected]="confUrl === selectedConfUrl">{{confUrl}}</li>
-</ul>
+<form class="form-horizontal">
+    <div class="form-group">
+        <label for="selectedConfUrl" class="col-sm-2 control-label">Selected Conformance Url</label>
+        <div class="col-sm-10">
+            <select id="selectedConfUrl" class="form-control" required [(ngModel)]="selectedConfUrl" (ngModelChange)="onSelectSource($event)">
+                <option *ngFor="let s of suggestedConf" [value]="s"><strong>{{s}}</strong></option>
+            </select>
+        </div>
+    </div>
 <fhir-conformance [conformance]="conformance"></fhir-conformance>

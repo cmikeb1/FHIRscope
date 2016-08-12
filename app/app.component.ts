@@ -1,20 +1,16 @@
 import {Component} from "@angular/core";
 import {ConformanceService} from "./shared/conformance.service";
-import { ROUTER_DIRECTIVES } from '@angular/router';
-import {MdToolbar} from '@angular2-material/toolbar';
+import {ROUTER_DIRECTIVES} from '@angular/router';
+import {DROPDOWN_DIRECTIVES} from 'ng2-bootstrap/ng2-bootstrap';
+
 
 
 @Component({
+    moduleId: module.id,
     selector: 'my-app',
-    template: `
-        <md-toolbar color="primary">
-            {{title}}
-        </md-toolbar>
-        <a [routerLink]="['/selector-static-list']">Static List Selector</a>
-        <a [routerLink]="['/help']">Help</a>
-        <router-outlet></router-outlet>        
-    `,
-    directives: [ROUTER_DIRECTIVES, MdToolbar],
+    templateUrl: 'app.component.html',
+    styleUrls: ['app.component.css'],
+    directives: [ROUTER_DIRECTIVES, DROPDOWN_DIRECTIVES],
     providers: [ConformanceService]
 })
 export class AppComponent {

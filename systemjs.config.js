@@ -8,7 +8,7 @@
         'app':                        'app', // 'dist',
         '@angular':                   'node_modules/@angular',
         'rxjs':                       'node_modules/rxjs',
-        '@angular2-material':         'node_modules/@angular2-material'
+        'moment':                     'node_modules/moment/moment.js'
     };
     // packages tells the System loader how to load when no filename and/or no extension
     var packages = {
@@ -28,14 +28,7 @@
         'upgrade',
     ];
 
-    var materialPkgs = [
-        'core', 'toolbar', 'button', 'card', 'checkbox', 'icon', 'input', 'list', 'progress-bar',
-        'progress-circle', 'radio', 'sidenav', 'grid-list', 'tabs', 'slide-toggle'
-    ];
 
-    materialPkgs.forEach(function (pkg){
-        packages['@angular2-material/' + pkg] = {main: pkg + ".js"};
-    });
 
     // Individual files (~300 requests):
     function packIndex(pkgName) {
