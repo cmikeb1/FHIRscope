@@ -1,10 +1,14 @@
-<form class="form-horizontal">
-    <div class="form-group">
-        <label for="selectedConfUrl" class="col-sm-2 control-label">Selected Conformance Url</label>
-        <div class="col-sm-10">
-            <select id="selectedConfUrl" class="form-control" required [(ngModel)]="selectedConfUrl" (ngModelChange)="onSelectSource($event)">
-                <option *ngFor="let s of suggestedConf" [value]="s"><strong>{{s}}</strong></option>
-            </select>
+<div class="container-fluid">
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label for="selectedConfUrl" class="col-sm-2 col-sm-offset-2 control-label">Selected Conformance Url</label>
+            <div class="col-sm-6">
+                <select id="selectedConfUrl" class="form-control" required [(ngModel)]="selectedConfUrl"
+                        (ngModelChange)="onSelectSource($event)">
+                    <option *ngFor="let s of suggestedConf" [value]="s"><strong>{{s}}</strong></option>
+                </select>
+            </div>
         </div>
     </div>
-<fhir-conformance [conformance]="conformance"></fhir-conformance>
+</div>
+<fhir-conformance [conf]="conformance"></fhir-conformance>

@@ -18,3 +18,12 @@ app/in-memory-data.service.js
 app/in-memory-data.service.js.map
 app/main.js
 app/main.js.map
+app/fhir-conformance-detail/fhir-conf/fhir-conf.component.css
+app/fhir-conformance-detail/fhir-conf/fhir-conf.component.html
+app/fhir-conformance-detail/fhir-conf/fhir-conf.component.ts
+app/fhir-conformance-detail/fhir-conf-value/fhir-conf-value.component.css
+app/fhir-conformance-detail/fhir-conf-value/fhir-conf-value.component.html
+app/fhir-conformance-detail/fhir-conf-value/fhir-conf-value.component.ts
+app/selector-static/selector-static.component.css
+app/selector-static/selector-static.component.html
+app/selector-static/selector-static.component.ts
