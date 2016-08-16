@@ -1,0 +1,7 @@
+li.source:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+li.selected {
+    color: red;
+}

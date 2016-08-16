@@ -1,0 +1,13 @@
+<div class="container-fluid">
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label for="selectedConfUrl" class="col-sm-2 col-sm-offset-2 control-label">Selected Conformance Url</label>
+            <div class="col-sm-6">
+                <input id="selectedConfUrl" class="form-control" required [(ngModel)]="selectedConfUrl"
+                        (ngModelChange)="onSelectSource($event)">
+                <p class="help-block">example: https://secure-api.hspconsortium.org/data/metadata</p>
+            </div>
+        </div>
+    </div>
+</div>
+<fhir-conformance [conf]="conformance"></fhir-conformance>

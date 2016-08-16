@@ -27,3 +27,17 @@ app/fhir-conformance-detail/fhir-conf-value/fhir-conf-value.component.ts
 app/selector-static/selector-static.component.css
 app/selector-static/selector-static.component.html
 app/selector-static/selector-static.component.ts
+app/app.module.js
+app/app.module.js.map
+app/app.routing.js
+app/app.routing.js.map
+app/fhir-conformance-detail/fhir-conf/fhir-conf.component.js
+app/fhir-conformance-detail/fhir-conf/fhir-conf.component.js.map
+app/fhir-conformance-detail/fhir-conf-value/fhir-conf-value.component.js
+app/fhir-conformance-detail/fhir-conf-value/fhir-conf-value.component.js.map
+app/selector-dynamic-entry/selector-dynamic-entry.component.js
+app/selector-dynamic-entry/selector-dynamic-entry.component.js.map
+app/selector-static/selector-static.component.js
+app/selector-static/selector-static.component.js.map
+app/selector-static-list/selector-static-list.component.js
+selector-static-list.component.js.map
