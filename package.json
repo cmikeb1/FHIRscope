@@ -7,7 +7,12 @@
     "postinstall": "typings install",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "typings": "typings"
+    "typings": "typings",
+    "clean": "rm -rf dist",
+    "copy": "copyfiles styles.css index.dist.html node_modules/bootstrap/dist/css/bootstrap.min.css node_modules/core-js/client/shim.min.js node_modules/zone.js/dist/zone.js node_modules/reflect-metadata/Reflect.js node_modules/ng2-bootstrap/bundles/ng2-bootstrap.min.js dist -f",
+    "rename": "cp dist/index.dist.html dist/index.html && rm dist/index.dist.html",
+    "build_dist": "npm run clean && npm run tsc && npm run copy && browserify -s main app/main.js > dist/npmbundle.js && npm run minify",
+    "minify": "uglifyjs dist/bundle.js --screw-ie8 --compress --mangle --output dist/bundle.min.js"
   },
   "license": "ISC",
   "dependencies": {
