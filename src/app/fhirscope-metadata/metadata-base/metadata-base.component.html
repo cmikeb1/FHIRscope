@@ -1,0 +1,6 @@
+<p>Metadata Parent</p>
+<md-toolbar *ngIf="errorMessage" color="warn">{{errorMessage}}</md-toolbar>
+<div *ngIf="_metadataProcessed">
+  <md-toolbar color="primary">{{_metadataProcessed.kind}} - FHIR v{{_metadataProcessed.fhirVersion}} published {{_metadataProcessed.date | date: 'MMMM d yyyy'}}</md-toolbar>
+</div>
+

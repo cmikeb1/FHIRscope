@@ -1,0 +1,7 @@
+<div class="source-select">
+  <md-select class="source-select-input" (change)="sourceChanged($event.value.url)"
+             placeholder="Choose a metadata source">
+    <md-option *ngFor="let source of metadataSources" [value]="source">{{source.name}}</md-option>
+  </md-select>
+  <p>{{_currentSourceUrl}}</p>
+</div>

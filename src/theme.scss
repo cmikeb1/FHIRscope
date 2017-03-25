@@ -1,0 +1,16 @@
+@import '~@angular/material/core/theming/all-theme';
+@import 'app/fhirscope-metadata/fhirscope-metadata.component';
+
+// Include non-theme styles for core.
+@include mat-core();
+
+// Define a theme.
+$primary: mat-palette($mat-light-blue, 700, 500, 800);
+$accent:  mat-palette($mat-light-green, A200, A100, A400);
+$warn:  mat-palette($mat-pink, 600);
+
+$theme: mat-light-theme($primary, $accent, $warn);
+
+// Include all theme styles for the components.
+@include angular-material-theme($theme);
+@include fhirscope-metadata($theme);

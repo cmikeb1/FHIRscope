@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body, app-root, md-sidenav-container, .mat-sidenav-content, #content {
+  margin: 0;
+  height: 100%;
+}
+
+md-sidenav {
+  width: 260px;
+}

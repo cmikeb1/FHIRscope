@@ -1,0 +1,28 @@
+<md-toolbar color="primary">
+  <span>FHIRscope Metadata</span>
+</md-toolbar>
+<md-sidenav-container>
+  <md-sidenav #sidenav opened="true" mode="side" disableClose="true">
+    <md-nav-list>
+      <a routerLink="/source-select" routerLinkActive="active">
+        <md-list-item>
+          Select from list
+        </md-list-item>
+      </a>
+      <md-divider></md-divider>
+      <a routerLink="/source-input" routerLinkActive="active">
+        <md-list-item>
+          Enter URL
+        </md-list-item>
+      </a>
+      <md-divider></md-divider>
+    </md-nav-list>
+  </md-sidenav>
+  <div id="content">
+    <p *ngIf="errorMessage">{{errorMessage}}</p>
+    <router-outlet></router-outlet>
+    <div class="fhirscope-metadata-wrapper">
+      <fhirscope-metadata [metadata]="metadata"></fhirscope-metadata>
+    </div>
+  </div>
+</md-sidenav-container>

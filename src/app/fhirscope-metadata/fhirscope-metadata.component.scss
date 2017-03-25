@@ -1,0 +1,19 @@
+// Import all the tools needed to customize the theme and extract parts of it
+@import '~@angular/material/core/theming/all-theme';
+
+// Define a mixin that accepts a theme and outputs the color styles for the component.
+@mixin fhirscope-metadata($theme) {
+  // Extract whichever individual palettes you need from the theme.
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+
+  // Use md-color to extract individual colors from a palette as necessary.
+  .add-color {
+    background-color: mat-color($primary);
+    border-color: mat-color($accent, A400);
+  }
+}
+
+p {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

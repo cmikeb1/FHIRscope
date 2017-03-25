@@ -1,44 +1,42 @@
-node_modules
-typings
-app/app.component.js
-app/app.component.js.map
-app/app.routes.js
-app/app.routes.js.map
-app/conformance-detail.component.js
-app/conformance-detail.component.js.map
-app/conformance.component.js
-app/conformance.component.js.map
-app/Conformance.js
-app/Conformance.js.map
-app/conformance.service.js
-app/conformance.service.js.map
-app/help.component.js
-app/help.component.js.map
-app/in-memory-data.service.js
-app/in-memory-data.service.js.map
-app/main.js
-app/main.js.map
-app/fhir-conformance-detail/fhir-conf/fhir-conf.component.css
-app/fhir-conformance-detail/fhir-conf/fhir-conf.component.html
-app/fhir-conformance-detail/fhir-conf/fhir-conf.component.ts
-app/fhir-conformance-detail/fhir-conf-value/fhir-conf-value.component.css
-app/fhir-conformance-detail/fhir-conf-value/fhir-conf-value.component.html
-app/fhir-conformance-detail/fhir-conf-value/fhir-conf-value.component.ts
-app/selector-static/selector-static.component.css
-app/selector-static/selector-static.component.html
-app/selector-static/selector-static.component.ts
-app/app.module.js
-app/app.module.js.map
-app/app.routing.js
-app/app.routing.js.map
-app/fhir-conformance-detail/fhir-conf/fhir-conf.component.js
-app/fhir-conformance-detail/fhir-conf/fhir-conf.component.js.map
-app/fhir-conformance-detail/fhir-conf-value/fhir-conf-value.component.js
-app/fhir-conformance-detail/fhir-conf-value/fhir-conf-value.component.js.map
-app/selector-dynamic-entry/selector-dynamic-entry.component.js
-app/selector-dynamic-entry/selector-dynamic-entry.component.js.map
-app/selector-static/selector-static.component.js
-app/selector-static/selector-static.component.js.map
-app/selector-static-list/selector-static-list.component.js
-selector-static-list.component.js.map
-dist
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
